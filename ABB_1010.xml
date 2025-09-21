@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="05/07/25||11:50:42" using="Simscape Multibody Link Version 7.4" from="SolidWorks 31.5.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="Mont1" uid="Mont1" version="164">
+<AssemblyFile name="Mont1.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="IRB_1010_BASE-1" uid="IRB_1010_BASE-1" grounded="true" entityUid="IRB_1010_BASE*:*Valor predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.11419564459328285 0.027161121321518072 -0.063103106063806771</Translation>
+</Transform>
+</Instance>
+<Instance name="IRB_1010_ELO2-1" uid="IRB_1010_ELO2-1" entityUid="IRB_1010_ELO2*:*Valor predeterminado">
+<Transform>
+<Rotation>1 0 0 0 0.79685063621900287 0.60417635137215597 0 -0.60417635137215597 0.79685063621900287</Rotation>
+<Translation>-0.11519408464172166 -0.087632385439198074 -0.024504726945421093</Translation>
+</Transform>
+</Instance>
+<Instance name="IRB_1010_ELO1-1" uid="IRB_1010_ELO1-1" entityUid="IRB_1010_ELO1*:*Valor predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.11419564459328287 0.027161121321518059 -0.063103106063810754</Translation>
+</Transform>
+</Instance>
+<Instance name="IRB_1010_ELO3-1" uid="IRB_1010_ELO3-1" entityUid="IRB_1010_ELO3*:*Valor predeterminado">
+<Transform>
+<Rotation>1 0 0 0 0.014535283405948167 0.99989435718795261 0 -0.99989435718795261 0.014535283405948167</Rotation>
+<Translation>-0.11619408464172164 -0.23602663762011764 0.2688635303594793</Translation>
+</Transform>
+</Instance>
+<Instance name="IRB_1010_ELO4-4" uid="IRB_1010_ELO4-4" entityUid="IRB_1010_ELO4*:*Valor predeterminado">
+<Transform>
+<Rotation>0.33039314095025624 1.6289842626052183e-16 0.94384340460323402 -0.94374369433183924 0.014535283405948443 0.33035823728976504 -0.013719031376743216 -0.9998943571879525 0.0048023579390935982</Rotation>
+<Translation>-0.47013536136793876 0.015049407341702264 0.27251337740954718</Translation>
+</Transform>
+</Instance>
+<Instance name="IRB_1010_ELO5-2" uid="IRB_1010_ELO5-2" entityUid="IRB_1010_ELO5*:*Valor predeterminado">
+<Transform>
+<Rotation>0.33039314095025607 -0.84345660387939159 -0.42358155033625755 -0.94374369433183958 -0.3017446680017834 -0.13527008073253058 -0.013719031376743409 0.44444472401496316 -0.89570121997982532</Rotation>
+<Translation>0.19901886159301821 0.24722807391616583 0.34298577007522607</Translation>
+</Transform>
+</Instance>
+<Instance name="IRB_1010_ELO6-2" uid="IRB_1010_ELO6-2" entityUid="IRB_1010_ELO6*:*Valor predeterminado">
+<Transform>
+<Rotation>0.26978757926625219 -0.84345660387939148 -0.46453807104036055 -0.95337106883282285 -0.30174466800178346 -0.0058103739169174523 -0.13527108776902988 0.44444472401496327 -0.88553408749129836</Rotation>
+<Translation>0.21437755685705701 0.19868068386031318 0.33917309539202939</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Concêntrico1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>IRB_1010_BASE-1</Uid>
+</InstancePath>
+<Position>0 0 -0.016418462417581256</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>IRB_1010_ELO1-1</Uid>
+</InstancePath>
+<Position>0 0 0.0804382996686272</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>IRB_1010_BASE-1</Uid>
+</InstancePath>
+<Position>0 -0.059200000000000003 0.123</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>IRB_1010_ELO1-1</Uid>
+</InstancePath>
+<Position>0 0 0.123000000000004</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>IRB_1010_ELO1-1</Uid>
+</InstancePath>
+<Position>-0.054552443121673386 0 0.190000000000004</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cone">
+<InstancePath>
+<Uid>IRB_1010_ELO2-1</Uid>
+</InstancePath>
+<Position>0.062200000000001102 2.6992297286199118e-15 0.19000000000000411</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>IRB_1010_ELO1-1</Uid>
+</InstancePath>
+<Position>0.059701559951562302 0 0.190000000000004</Position>
+<Axis>1 1.1102230246251559e-16 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>IRB_1010_ELO2-1</Uid>
+</InstancePath>
+<Position>0.0607000000000011 2.6992297286199118e-15 0.19000000000000411</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico3">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>IRB_1010_ELO2-1</Uid>
+</InstancePath>
+<Position>-0.082999999999998894 2.7269853042355408e-15 0.37500000000000017</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>IRB_1010_ELO3-1</Uid>
+</InstancePath>
+<Position>-0.060499999999998902 2.7755575615628914e-15 0.37500000000000011</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente3">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>IRB_1010_ELO2-1</Uid>
+</InstancePath>
+<Position>-0.061499999999998903 2.7686186676589841e-15 0.40475000000000017</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>IRB_1010_ELO3-1</Uid>
+</InstancePath>
+<Position>-0.060499999999998902 2.7755575615628914e-15 0.37500000000000011</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico4">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>IRB_1010_ELO3-1</Uid>
+</InstancePath>
+<Position>1.1102230246251565e-15 0.055300000000002653 0.37500000000000006</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>IRB_1010_ELO4-4</Uid>
+</InstancePath>
+<Position>1.1102230246251565e-15 0.021150037127172061 0.37500000000000455</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente4">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>IRB_1010_ELO3-1</Uid>
+</InstancePath>
+<Position>-0.044999999999998888 0.055300000000002764 0.37500000000000006</Position>
+<Axis>0 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>IRB_1010_ELO4-4</Uid>
+</InstancePath>
+<Position>1.0824674490095276e-15 0.055300000000000016 0.37500000000000455</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincidente5">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>IRB_1010_ELO4-4</Uid>
+</InstancePath>
+<Position>0.040800000000001085 0.185 0.37500000000000455</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>IRB_1010_ELO5-2</Uid>
+</InstancePath>
+<Position>0.039800000000001112 0.18500000000000255 0.37500000000000011</Position>
+<Axis>1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico5">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>IRB_1010_ELO4-4</Uid>
+</InstancePath>
+<Position>-0.052499999999998909 0.185 0.3750000000000045</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>IRB_1010_ELO5-2</Uid>
+</InstancePath>
+<Position>0.039800000000001112 0.18500000000000255 0.37500000000000011</Position>
+<Axis>-1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente8">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>IRB_1010_ELO5-2</Uid>
+</InstancePath>
+<Position>1.1102230246251565e-15 0.21060000000000251 0.37500000000000011</Position>
+<Axis>0 1.0000000000000002 -1.1102230246251565e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>IRB_1010_ELO6-2</Uid>
+</InstancePath>
+<Position>0.0055000000000036409 0.21060000000000254 0.37499999999999994</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico6">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>IRB_1010_ELO5-2</Uid>
+</InstancePath>
+<Position>1.1102230246251565e-15 0.21060000000000251 0.37500000000000011</Position>
+<Axis>0 -1.0000000000000002 1.1102230246251565e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>IRB_1010_ELO6-2</Uid>
+</InstancePath>
+<Position>3.6637359812630166e-15 0.20565832523010358 0.37499999999999994</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="IRB_1010_BASE" uid="IRB_1010_BASE*:*Valor predeterminado" version="153">
+<ModelUnits mass="kilogram" length="meter"/>
+<PartFile name="IRB_1010_BASE.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>2.6220121224132455</Mass>
+<CenterOfMass>0.0074143451132216258 -0.048312655375472288 0.059508338584259239</CenterOfMass>
+<Inertia>0.013672553469052329 0.0061831610645065047 0.013435816143382157 9.5098061073158985e-05 1.794511982553492e-05 0.001816832413801752</Inertia>
+</MassProperties>
+<GeometryFile name="IRB_1010_BASE_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Diffuse r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Specular r="0.39019607843137255" g="0.40000000000000002" b="0.39411764705882352" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="IRB_1010_ELO1" uid="IRB_1010_ELO1*:*Valor predeterminado" version="169">
+<ModelUnits mass="kilogram" length="meter"/>
+<PartFile name="IRB_1010_ELO1.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.1525507608769987</Mass>
+<CenterOfMass>-0.0002450789108694952 -0.0025830760784418508 0.1756503240560191</CenterOfMass>
+<Inertia>0.0019716049353466058 0.0024432916717269954 0.0021353399069690159 -7.2759364810828423e-05 1.2590512833036577e-05 3.0746705128616503e-06</Inertia>
+</MassProperties>
+<GeometryFile name="IRB_1010_ELO1_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Diffuse r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Specular r="0.39019607843137255" g="0.40000000000000002" b="0.39411764705882352" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="IRB_1010_ELO2" uid="IRB_1010_ELO2*:*Valor predeterminado" version="185">
+<ModelUnits mass="kilogram" length="meter"/>
+<PartFile name="IRB_1010_ELO2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.8921358835712656</Mass>
+<CenterOfMass>-0.00020015778476752908 -0.020788943034876162 0.26983265688782238</CenterOfMass>
+<Inertia>0.0092655271168888484 0.016368424318971574 0.010155912062904499 0.00034473556688831563 -5.3444985634045354e-05 3.8816151779694586e-06</Inertia>
+</MassProperties>
+<GeometryFile name="IRB_1010_ELO2_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Diffuse r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Specular r="0.39019607843137255" g="0.40000000000000002" b="0.39411764705882352" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="IRB_1010_ELO3" uid="IRB_1010_ELO3*:*Valor predeterminado" version="201">
+<ModelUnits mass="kilogram" length="meter"/>
+<PartFile name="IRB_1010_ELO3.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.1183357708630797</Mass>
+<CenterOfMass>-0.00015354779019726366 -0.0069828993731129822 0.37478087676231697</CenterOfMass>
+<Inertia>0.002095833610349671 0.0016078181672038166 0.0024525012772234527 5.3945185155936118e-06 2.0815268571284248e-06 -2.1869424143592818e-06</Inertia>
+</MassProperties>
+<GeometryFile name="IRB_1010_ELO3_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Diffuse r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Specular r="0.39019607843137255" g="0.40000000000000002" b="0.39411764705882352" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="IRB_1010_ELO4" uid="IRB_1010_ELO4*:*Valor predeterminado" version="217">
+<ModelUnits mass="kilogram" length="meter"/>
+<PartFile name="IRB_1010_ELO4.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.7541023681818031</Mass>
+<CenterOfMass>0.0012414047258236911 0.11130803880629081 0.37672658167878431</CenterOfMass>
+<Inertia>0.0017191047182574487 0.0014892558053314206 0.0024628441316106287 3.1275230096835846e-05 8.1478864643458499e-08 -2.9547079312637058e-05</Inertia>
+</MassProperties>
+<GeometryFile name="IRB_1010_ELO4_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Diffuse r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Specular r="0.39019607843137255" g="0.40000000000000002" b="0.39411764705882352" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="IRB_1010_ELO5" uid="IRB_1010_ELO5*:*Valor predeterminado" version="233">
+<ModelUnits mass="kilogram" length="meter"/>
+<PartFile name="IRB_1010_ELO5.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.50255997236971583</Mass>
+<CenterOfMass>-0.00085991499720645828 0.17234722242013714 0.37514110131012601</CenterOfMass>
+<Inertia>0.00059447828471202821 0.00042158902362225865 0.00062289488611933213 -3.0352190530509843e-06 2.0595137323102175e-06 -2.8845155588736907e-06</Inertia>
+</MassProperties>
+<GeometryFile name="IRB_1010_ELO5_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Diffuse r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Specular r="0.39019607843137255" g="0.40000000000000002" b="0.39411764705882352" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="IRB_1010_ELO6" uid="IRB_1010_ELO6*:*Valor predeterminado" version="249">
+<ModelUnits mass="kilogram" length="meter"/>
+<PartFile name="IRB_1010_ELO6.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.023001010310016695</Mass>
+<CenterOfMass>3.6322726921924934e-15 0.22007842779289635 0.3749752199423268</CenterOfMass>
+<Inertia>3.5910327885614096e-06 5.6411612155183307e-06 3.5757375021270585e-06 -1.5378848671921322e-09 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="IRB_1010_ELO6_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Diffuse r="0.7803921568627451" g="0.80000000000000004" b="0.78823529411764703" a="1"/>
+<Specular r="0.39019607843137255" g="0.40000000000000002" b="0.39411764705882352" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>

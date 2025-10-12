@@ -93,9 +93,17 @@ Gnum = double(subs(Dcm.Torque.G, subsD, valsD));
 
 fprintf('\n||M - M^T||_F = %.3e\n', norm(Mnum - Mnum.', 'fro'));
 fprintf('Norma de G: %.3e\n', norm(Gnum));
+detM = det(Mnum);
+fprintf('det(M) = %.3e\n', detM);
 
 if norm(Mnum - Mnum.', 'fro') < 1e-8
     disp('✅ M simétrica (ok)');
 else
     warning('⚠️  M não está exatamente simétrica — verifique as expressões.');
+end
+
+if abs(detM) > 1e-8 && isfinite(detM)
+    disp('✅ determinante de M diferente de zero (ok)');
+else
+    warning('⚠️  determinante de M está próximo de zero ou não numérico.');
 end

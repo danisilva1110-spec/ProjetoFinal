@@ -1,4 +1,4 @@
-% === Excentricidades (quais eixos têm comprimento fixo por junta) ===
+01% === Excentricidades (quais eixos têm comprimento fixo por junta) ===
 % Lx, Ly, Lz serão criados simbolicamente em calcularTransformadas.
 % Aqui só marcamos em qual eixo cada junta tem deslocamento fixo (0/1).
 

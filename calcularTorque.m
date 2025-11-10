@@ -2,11 +2,14 @@ function Torque = calcularTorque(Pcm, Dcm)
     Torque        = struct();
     Torque.n      = length(Pcm);
     Torque.M      = sym(zeros(Torque.n, Torque.n));
-    Torque.qs     = Pcm{Torque.n}.juntas(1,:)
-    Torque.dqs    = Pcm{Torque.n}.juntas(2,:)
-    Torque.d2qs   = Pcm{Torque.n}.juntas(3,:)
-    Torque.M = hessian(Dcm.EKTotal, Torque.dqs);
-    %Torque.M = simplify((Torque.M + Torque.M.')/2); % força simetria
+    Torque.qs     = transpose(Pcm{Torque.n}.juntas(1,:));
+    Torque.dqs    = transpose(Pcm{Torque.n}.juntas(2,:));
+    Torque.d2qs   = transpose(Pcm{Torque.n}.juntas(3,:));
+
+    % Momento generalizado obtido por d(T)/d(dq)
+    generalized_momentum = transpose(jacobian(Dcm.EKTotal, Torque.dqs));
+    Torque.M = simplify(jacobian(generalized_momentum, Torque.dqs), 'Steps', 10);
+    Torque.M = simplify((Torque.M + Torque.M.')/2);
 
     
     Torque.C = sym(zeros(Torque.n, 1));
@@ -35,6 +38,6 @@ function Torque = calcularTorque(Pcm, Dcm)
         Torque.G(i) = simplify(diff(Dcm.EGTotal, Torque.qs(i)), 'Steps', 5);
     end
     
-    Torque.Tau = Torque.M * transpose(Torque.d2qs) + Torque.C + Torque.H + Torque.G;
+    Torque.Tau = Torque.M * Torque.d2qs + Torque.C + Torque.H + Torque.G;
    
 end

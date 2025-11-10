@@ -24,12 +24,15 @@ function Dinamica = calcularDinamicaDosPontos(Pcm,zeros)
     R   = Dinamica.Rotacao;
     r   = Dinamica.Posicao(:);     % CM em base (3x1)
     w   = Dinamica.Omega(:);       % velocidade angular em base (3x1)
+    v   = Dinamica.Velocidade(:);  % velocidade linear do CM em base (3x1)
     Ic0 = R * Dinamica.Ip * R.';   % tensor no CM expresso na base
     Ipar = Dinamica.m * ( (r.'*r)*eye(3) - (r*r.') );  % eixo paralelo (matricial)
     I0_about_base = Ic0 + Ipar;
     
-    Dinamica.I0 = I0_about_base;
-    Dinamica.EK = (1/2) * (w.' * (I0_about_base * w));   % <-- sem termo translacional
+    Dinamica.I0      = I0_about_base;
+    Dinamica.EKrot   = (1/2) * (w.' * (I0_about_base * w));
+    Dinamica.EKtrans = (1/2) * Dinamica.m * (v.' * v);
+    Dinamica.EK      = Dinamica.EKrot + Dinamica.EKtrans;
 
     Dinamica.EG         = -Dinamica.m * Dinamica.g * Dinamica.Posicao;
     Dinamica.L          = Dinamica.EK - Dinamica.EG;

@@ -2,14 +2,12 @@ function Torque = calcularTorque(Pcm, Dcm)
     Torque        = struct();
     Torque.n      = length(Pcm);
     Torque.M      = sym(zeros(Torque.n, Torque.n));
-    Torque.qs     = Pcm{Torque.n}.juntas(1,:);
-    Torque.dqs    = Pcm{Torque.n}.juntas(2,:);
-    Torque.d2qs   = Pcm{Torque.n}.juntas(3,:);
-    for i = 1:Torque.n
-        for j = 1:Torque.n
-            Torque.M(i,j) = simplify(diff(diff(Dcm.EKTotal, Torque.dqs(i)),Torque.dqs(j)), 'Steps', 5);
-        end
-    end
+    Torque.qs     = Pcm{Torque.n}.juntas(1,:)
+    Torque.dqs    = Pcm{Torque.n}.juntas(2,:)
+    Torque.d2qs   = Pcm{Torque.n}.juntas(3,:)
+    Torque.M = hessian(Dcm.EKTotal, Torque.dqs);
+    %Torque.M = simplify((Torque.M + Torque.M.')/2); % força simetria
+
     
     Torque.C = sym(zeros(Torque.n, 1));
     Torque.H = sym(zeros(Torque.n, 1));

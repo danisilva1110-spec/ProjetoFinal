@@ -38,6 +38,6 @@ function Torque = calcularTorque(Pcm, Dcm)
         Torque.G(i) = simplify(diff(Dcm.EGTotal, Torque.qs(i)), 'Steps', 5);
     end
     
-    Torque.Tau = Torque.M * transpose(Torque.d2qs) + Torque.C + Torque.H + Torque.G;
+    Torque.Tau = Torque.M * Torque.d2qs + Torque.C + Torque.H + Torque.G;
    
 end
